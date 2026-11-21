@@ -816,8 +816,11 @@ def token_embedding_backward(d_out, cache):
 # Step 96 - slice_positional_embedding (not yet solved)
 # TODO: implement
 
-# Step 97 - add_token_and_positional_embeddings (not yet solved)
-# TODO: implement
+# Step 97 - add_token_and_positional_embeddings
+def add_token_and_positional_embeddings(token_emb, pos_emb):
+    """Sum token embeddings (B,T,d_model) and positional embeddings (T,d_model)."""
+    # TODO: combine token and positional embeddings into a single (B,T,d_model) tensor
+    return elementwise_add(token_emb, pos_emb)
 
 # Step 98 - embedding_sum_backward (not yet solved)
 # TODO: implement
